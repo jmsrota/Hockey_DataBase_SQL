@@ -3,7 +3,6 @@
 /* Basic styling for the dropdown */
 .navbar {
     background-color: #333;
-    overflow: hidden;
 }
 .navbar a {
     color: white;
