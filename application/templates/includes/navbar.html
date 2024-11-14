@@ -1,10 +1,21 @@
-<nav class="navbar">
-    <a href="#home">Home</a>
+<nav class="navbar {% if navbar_color == 'Canucks' %}canucks-color
+                   {% elif navbar_color == 'Oilers' %}oilers-color
+                   {% else %}default-color {% endif %}">
+    <a href="{{ url_for('home')}}">Home</a>
     <div class="dropdown">
-        <a href="#" class="dropbtn">Menu</a>
+        <a href="#" class="dropbtn"> Menu </a>
         <div class="dropdown-content">
-            <a href="{{url_for('canucks')}}"></a>">Canucks</a>
+            <a 
+            href="{{ url_for('Canucks') }}" 
+            >Canucks
+            </a>
+            <a 
+            href="{{ url_for('Oilers') }}" 
+            >Oilers
+            </a>
+        </a>
         </div>
     </div>
     <a href="#about">About</a>
+    <div class="angled-strip"></div>
 </nav>

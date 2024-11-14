@@ -1,19 +1,52 @@
-/* styles.css */
-
 /* Basic styling for the dropdown */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .navbar {
-    background-color: #333;
+    height: 150px;  /* Reduced height for a more typical navbar */
+    background-color: #333;  /* Dark background color */
+    padding: 5px 20px;  /* Adjust padding for more control over spacing */
+    font-family: 'Bangers', sans-serif;  /* Fun, bold font */
+    display: flex;
+    align-items: center;
+    border-left: 10px solid #00843D;
+    border-bottom: 10px solid #00843D;
 }
+
+
+/* Navbar Links */
 .navbar a {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
-    display: inline-block;
+    font-size: 60px; /* Reduced font size for a more reasonable navbar link size */
+    margin-right: 35px;   /* Space between links */
+    font-weight: 600;  /* Bold text */
+    text-transform: uppercase; /* Uppercase for a fun style */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
 }
+
+body {
+    background-color: #FFFFFF ;
+}
+
+/* Navbar Colors based on Canucks/Oilers selection */
+.navbar.canucks-color {
+    background-color: #00205B;  /* Canucks Blue */
+}
+
+.navbar.oilers-color {
+    background-color: #FF4C00;  /* Oilers Orange */
+}
+
+.navbar.default-color {
+    background-color: #333;  /* Default dark color */
+}
+
+/* Dropdown styling */
 .dropdown {
     display: inline-block;
     position: relative;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -22,18 +55,26 @@
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
+
+/* Dropdown links */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+
+/* Hover effects for navbar links */
+.navbar a:hover {
+    background-color: #555;  /* Darker background on hover */
 }
+
+/* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Change the dropdown button background on hover */
 .dropdown:hover .dropbtn {
     background-color: #555;
 }

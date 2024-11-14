@@ -1,0 +1,15 @@
+{% extends "BaseLayout.html" %}
+
+{% block content %}
+<h1>Player Data</h1>
+<table border="1">
+    <tr>
+        <th>Player Name</th>
+    </tr>
+    {% for player in player %}
+    <tr>
+        <td>{{ player.playerName }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
