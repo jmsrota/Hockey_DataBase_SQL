@@ -7,11 +7,15 @@ def home():
 
 @app.route('/Canucks)')
 def Canucks():
-    player = Player.query.all()
-    return render_template('Canucks.html', player=player, navbar_color='Canucks')
+    team = Team.query.filter_by(TeamName='Canucks').all()
+    player = Player.query.filter(Player.idTeam==1).all()
+    return render_template('Canucks.html', 
+                           team=team, 
+                           player=player,
+                           navbar_color='Canucks')
 
 @app.route('/Oilers')
 def Oilers():
-    player = Player.query.all()
-    return render_template('Oilers.html', player=player, navbar_color='Oilers')
+    team = Team.query.all()
+    return render_template('Oilers.html', team=team, navbar_color='Oilers')
 

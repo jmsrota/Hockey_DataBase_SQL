@@ -8,10 +8,14 @@
     font-family: 'Bangers', sans-serif;  /* Fun, bold font */
     display: flex;
     align-items: center;
-    border-left: 10px solid #00843D;
-    border-bottom: 10px solid #00843D;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
 }
 
+.navbar img {
+    width: 100px; /* Adjust the width as needed */
+    height: 50px; /* Keeps the aspect ratio intact */
+}
 
 /* Navbar Links */
 .navbar a {
@@ -31,10 +35,18 @@ body {
 /* Navbar Colors based on Canucks/Oilers selection */
 .navbar.canucks-color {
     background-color: #00205B;  /* Canucks Blue */
+    border-left: 10px solid #00843D;
+    border-bottom: 10px solid #00843D;
 }
 
 .navbar.oilers-color {
     background-color: #FF4C00;  /* Oilers Orange */
+    border-left: 10px solid #041E42;
+    border-bottom: 10px solid #041E42;
+}
+
+.navbar.oilers-color a {
+    color: #041E42;
 }
 
 .navbar.default-color {
@@ -77,4 +89,43 @@ body {
 /* Change the dropdown button background on hover */
 .dropdown:hover .dropbtn {
     background-color: #555;
+}
+
+/* Canucks page only */
+
+.Canucks_header {
+    color:#FFFFFF;
+    height: 75px;  /* Reduced height for a more typical navbar */
+    font-family: 'Bangers', sans-serif;  /* Fun, bold font */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #00205B;
+    border-bottom: #00843D;
+}
+
+.Canucks_header, .Canucks_table {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.Canucks_table {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: 'Bangers', sans-serif;  
+    width: 100%; /* Full width of its container */
+    border-collapse: collapse; /* Ensures borders between table cells collapse into one */
+}
+
+.Canucks_table, .Canucks_table th, .Canucks_table td {
+    border: 2px solid #00843D; /* Add a solid green border */
+}
+
+.Canucks_table th, .Canucks_table td {
+    padding: 10px; /* Add padding for better spacing inside cells */
+    text-align: center; /* Align text to the center (instead of 'middle') */
+}
+
+.Canucks_table th, .Canucks_table td{
+    background-color: #00205B; /* Background color for headers */
 }
