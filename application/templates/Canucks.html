@@ -19,14 +19,43 @@
     {% endfor %}
 </table>
 
+<h1 class = "Canucks_header">Roster</h1>
 <section class ="Roster">
-    <table class = "Roster_table">
+    <table class = "Forwards_table">
         <tr>
-            <th>Player</th>
+            <th>Forwards</th>
+            <th>Position</th>
         </tr>
-        {% for p in player%}
+        {% for p in forwards%}
         <tr>
             <td>{{ p.playerName }}</td>
+            <td>{{ p.Position }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table class = "Defence_table">
+        <tr>
+            <th>Defensemen</th>
+            <th>Position</th>
+        </tr>
+        {% for d in defence%}
+        <tr>
+            <td>{{ d.playerName }}</td>
+            <td>{{ d.Position }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table class = "Goalies_table">
+        <tr>
+            <th>Goalies</th>
+            <th>Position</th>
+        </tr>
+        {% for g in goalies%}
+        <tr>
+            <td>{{ g.playerName }}</td>
+            <td>{{ g.Position }}</td>
         </tr>
         {% endfor %}
     </table>

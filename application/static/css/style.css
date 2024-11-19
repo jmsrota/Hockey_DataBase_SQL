@@ -104,6 +104,7 @@ body {
     border-bottom: #00843D;
 }
 
+.ro
 .Canucks_header, .Canucks_table {
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
@@ -129,3 +130,30 @@ body {
 .Canucks_table th, .Canucks_table td{
     background-color: #00205B; /* Background color for headers */
 }
+
+.Roster {
+    display: flex; /* This makes the two tables appear side by side */
+    align-items: flex-start; /* Prevents vertical stretching */
+}
+
+.Forwards_table, .Defence_table, .Goalies_table{
+    color: #00205B;
+    font-size: 20px;
+    font-family: 'Bangers', sans-serif;  
+    width: 25%; /* Full width of its container */
+    border-collapse: collapse; /* Ensures borders between table cells collapse into one */
+}
+
+.Forwards_table, .Forwards_table th, .Forwards_table td,
+.Defence_table, .Defence_table th, .Defence_table td, 
+.Goalies_table, .Goalies_table th, .Goalies_table td{
+    border: 2px solid #00205B; /* Add a solid green border */
+}
+
+.Forwards_table th, .Forwards_table td, .Defence_table th, .Defence_table td, 
+.Goalies_table th, .Goalies_table td {
+    padding: 10px; /* Add padding for better spacing inside cells */
+    text-align: center; /* Align text to the center (instead of 'middle') */
+    background-color: #FFFFFF;
+}
+

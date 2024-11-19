@@ -8,10 +8,15 @@ def home():
 @app.route('/Canucks)')
 def Canucks():
     team = Team.query.filter_by(TeamName='Canucks').all()
-    player = Player.query.filter(Player.idTeam==1).all()
+    forwards = Player.query.filter(Player.idTeam==1, Player.Role=='Forwards').all()
+    defence = Player.query.filter(Player.idTeam==1, Player.Role=='Defensemen').all()
+    goalies = Player.query.filter(Player.idTeam==1, Player.Role=='Goalies').all()
+    print (defence)
     return render_template('Canucks.html', 
                            team=team, 
-                           player=player,
+                           forwards=forwards,
+                           defence=defence,
+                           goalies = goalies,
                            navbar_color='Canucks')
 
 @app.route('/Oilers')
