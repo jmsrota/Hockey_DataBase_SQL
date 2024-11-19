@@ -19,11 +19,11 @@
     {% endfor %}
 </table>
 
-<h1 class = "Canucks_header">Roster</h1>
 <section class ="Roster">
+    <h1 class = "Canucks_header">Forwards</h1>
     <table class = "Forwards_table">
         <tr>
-            <th>Forwards</th>
+            <th>Player</th>
             <th>Position</th>
         </tr>
         {% for p in forwards%}
@@ -33,10 +33,10 @@
         </tr>
         {% endfor %}
     </table>
-
+    <h1 class = "Canucks_header">Defensemen</h1>
     <table class = "Defence_table">
         <tr>
-            <th>Defensemen</th>
+            <th>Player</th>
             <th>Position</th>
         </tr>
         {% for d in defence%}
@@ -46,10 +46,10 @@
         </tr>
         {% endfor %}
     </table>
-
+    <h1 class = "Canucks_header">Goalies</h1>
     <table class = "Goalies_table">
         <tr>
-            <th>Goalies</th>
+            <th>Player</th>
             <th>Position</th>
         </tr>
         {% for g in goalies%}

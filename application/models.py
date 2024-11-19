@@ -56,6 +56,7 @@ class Player(db.Model):
     
     Position = db.Column(db.String(2), nullable=True)
     Role = db.Column(db.String(45), nullable=True)
+    isGoalie = db.Column(db.Boolean, default=False)
     idPlayer_Stats = db.Column(db.Integer, db.ForeignKey('PlayerStats.idPlayerStats'), nullable=True)
     idGoalie_Stats = db.Column(db.Integer, db.ForeignKey('GoalieStats.idGoalieStats'), nullable=True)
     idTeam = db.Column(db.Integer, db.ForeignKey('Team.idTeam'), nullable=True)

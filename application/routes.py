@@ -11,7 +11,9 @@ def Canucks():
     forwards = Player.query.filter(Player.idTeam==1, Player.Role=='Forwards').all()
     defence = Player.query.filter(Player.idTeam==1, Player.Role=='Defensemen').all()
     goalies = Player.query.filter(Player.idTeam==1, Player.Role=='Goalies').all()
-    print (defence)
+
+    for player in forwards:
+        print(f"Player: {player.playerName}, idPlayer_Stats: {player.idPlayer_Stats}")
     return render_template('Canucks.html', 
                            team=team, 
                            forwards=forwards,

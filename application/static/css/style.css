@@ -131,10 +131,6 @@ body {
     background-color: #00205B; /* Background color for headers */
 }
 
-.Roster {
-    display: flex; /* This makes the two tables appear side by side */
-    align-items: flex-start; /* Prevents vertical stretching */
-}
 
 .Forwards_table, .Defence_table, .Goalies_table{
     color: #00205B;
