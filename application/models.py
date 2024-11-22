@@ -5,6 +5,7 @@ class PlayerStats(db.Model):
     __tablename__ = 'PlayerStats'
     
     idPlayerStats = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    Role = db.Column(db.String(45), nullable=True)
     Goals = db.Column(db.Integer)
     Assists = db.Column(db.Integer)
     Points = db.Column(db.Integer)

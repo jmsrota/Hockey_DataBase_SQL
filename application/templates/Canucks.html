@@ -25,11 +25,17 @@
         <tr>
             <th>Player</th>
             <th>Position</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>Points</th>
         </tr>
-        {% for p in forwards%}
+        {% for p, s in forwards%}
         <tr>
             <td>{{ p.playerName }}</td>
             <td>{{ p.Position }}</td>
+            <th>{{ s.Goals }}</th>
+            <th>{{ s.Assists }}</th>
+            <th>{{ s.Points }}</th>
         </tr>
         {% endfor %}
     </table>

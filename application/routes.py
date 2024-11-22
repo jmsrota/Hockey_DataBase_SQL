@@ -8,12 +8,11 @@ def home():
 @app.route('/Canucks)')
 def Canucks():
     team = Team.query.filter_by(TeamName='Canucks').all()
-    forwards = Player.query.filter(Player.idTeam==1, Player.Role=='Forwards').all()
+    #forwards = Player.query.filter(Player.idTeam==1, Player.Role=='Forwards').all()
+    forwards = db.session.query(Player, PlayerStats).join(PlayerStats).filter(Player.idTeam == 1, Player.Role == 'Forwards').all()
     defence = Player.query.filter(Player.idTeam==1, Player.Role=='Defensemen').all()
     goalies = Player.query.filter(Player.idTeam==1, Player.Role=='Goalies').all()
 
-    for player in forwards:
-        print(f"Player: {player.playerName}, idPlayer_Stats: {player.idPlayer_Stats}")
     return render_template('Canucks.html', 
                            team=team, 
                            forwards=forwards,
